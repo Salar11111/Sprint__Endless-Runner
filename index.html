@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Sprint — Endless Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="ui">
+    <div id="menu" class="screen">
+      <h1>SPRINT</h1>
+      <p class="tagline">How far can you run?</p>
+      <div class="controls">
+        <span class="key">SPACE</span> / <span class="key">W</span> / tap — jump
+        <br>
+        double tap — double jump
+      </div>
+      <button id="startBtn" class="btn primary">Start</button>
+    </div>
+
+    <div id="over" class="screen hidden">
+      <h2>Game Over</h2>
+      <p class="big" id="finalScore">0</p>
+      <p class="best" id="bestScore">Best: 0</p>
+      <button id="restartBtn" class="btn primary">Run Again</button>
+    </div>
+
+    <button id="muteBtn" class="mute" aria-label="Toggle sound">🔊</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

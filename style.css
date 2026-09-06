@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: #1b2a32;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  position: relative;
+}
+
+#game {
+  position: absolute;
+  inset: 0;
+  display: block;
+  touch-action: none;
+}
+
+#ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  pointer-events: auto;
+  background: linear-gradient(180deg, rgba(20, 30, 40, 0.35), rgba(20, 30, 40, 0.65));
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 64px;
+  letter-spacing: 14px;
+  color: #fff;
+  text-shadow: 0 4px 0 #2d6a4f, 0 8px 24px rgba(0, 0, 0, 0.45);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 6px;
+  color: #fff;
+  text-shadow: 0 3px 0 #b3402a, 0 8px 24px rgba(0, 0, 0, 0.45);
+  font-weight: 900;
+}
+
+.tagline {
+  color: #f5e9d0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.controls {
+  color: #dfe9ee;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 6px 0 10px;
+}
+
+.key {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.big {
+  font-size: 56px;
+  font-weight: 900;
+  color: #ffd93d;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.best {
+  font-size: 16px;
+  color: #dce6ea;
+  letter-spacing: 1px;
+}
+
+.btn {
+  pointer-events: auto;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 14px 42px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(180deg, #3fa46b, #2d8a58);
+  box-shadow: 0 5px 0 #1f663f, 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #1f663f, 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #1f663f;
+}
+
+.mute {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  pointer-events: auto;
+}
+
+.mute:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
