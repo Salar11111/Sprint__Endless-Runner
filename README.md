@@ -33,6 +33,12 @@ The small size does not mean it is shallow: variable-height jumps, a double jump
 
 ---
 
+## 📸 Screenshots
+
+![Sprint gameplay](docs/screenshots/gameplay.jpg)
+
+---
+
 ## 🎛 Controls
 
 | Action | Keyboard | Touch |
