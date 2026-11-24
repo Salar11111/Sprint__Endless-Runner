@@ -729,20 +729,30 @@ function drawParticles() {
 }
 
 function drawHud() {
+  // Presentation only: a compact plaque keeps score/best readable over the sky.
+  const plaqueW = Math.min(224, W - 32);
+  const plaqueH = 88;
+  const px = (W - plaqueW) / 2;
+  const py = 16;
+
+  ctx.save();
+  ctx.fillStyle = 'rgba(9, 15, 19, 0.62)';
+  rr(px, py, plaqueW, plaqueH, 12);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+
   ctx.textAlign = 'center';
   ctx.textBaseline = 'top';
-  ctx.font = '800 34px "Segoe UI", system-ui, sans-serif';
-  ctx.fillStyle = 'rgba(255,255,255,0.9)';
-  ctx.shadowColor = 'rgba(0,0,0,0.45)';
-  ctx.shadowOffsetY = 3;
-  ctx.shadowBlur = 10;
-  ctx.fillText(String(score).padStart(5, '0'), W / 2, 26);
-  ctx.shadowOffsetY = 0;
-  ctx.shadowBlur = 0;
+  ctx.fillStyle = '#f2f6f8';
+  ctx.font = '700 32px ui-monospace, SFMono-Regular, Consolas, monospace';
+  ctx.fillText(String(score).padStart(5, '0'), W / 2, py + 10);
 
-  ctx.font = '600 13px "Segoe UI", system-ui, sans-serif';
-  ctx.fillStyle = 'rgba(255,255,255,0.75)';
-  ctx.fillText('BEST ' + best, W / 2, 70);
+  ctx.fillStyle = '#c2d0d7';
+  ctx.font = '600 13px system-ui, -apple-system, "Segoe UI", sans-serif';
+  ctx.fillText('BEST ' + best, W / 2, py + 58);
+  ctx.restore();
 }
 
 function loop(t) {
